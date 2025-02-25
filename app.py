@@ -12,7 +12,7 @@ def carrega_modelo():
    
     url = 'https://drive.google.com/file/d/1UO28b2wiLE9kl1eP2aB9z1I6NQ28s5sA/view?usp=drive_link'
     gdown.download(url, 'modelo_quantizado16bits.tflite')
-    interpreter = tf.lite.Interpreter(model_path='modelo_final_de_aprendizado.tflite')
+    interpreter = tf.lite.Interpreter(model_path='modelo_final_de_aprendizado.h5')
     interpreter.allocate_tensors()
     return interpreter
 
